@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lost? · Open Source BYTE 2K26</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=DM+Sans:wght@400;700&family=Knewave&display=swap" rel="stylesheet" />
+  <!-- Styles are inline: GitHub Pages serves this file at any broken path, where relative CSS links would break. -->
+  <style>
+    :root { --sky: #b8def2; --red: #e3341e; --yellow: #ffe03d; --ink: #16213e; }
+    body {
+      display: grid;
+      place-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 24px;
+      background: var(--sky);
+      color: var(--ink);
+      font-family: "DM Sans", system-ui, sans-serif;
+      text-align: center;
+    }
+    h1 { margin: 0; font: 400 clamp(5rem, 20vw, 11rem)/0.9 "Knewave", cursive; color: var(--red); rotate: -4deg; }
+    .term {
+      margin: 32px auto 24px;
+      padding: 16px 20px;
+      max-width: 440px;
+      border-radius: 12px;
+      background: var(--ink);
+      color: #fffdf7;
+      font: 500 0.9rem/1.7 ui-monospace, Consolas, monospace;
+      text-align: left;
+      rotate: 2deg;
+    }
+    .term b { color: var(--sky); }
+    .term .err { color: var(--yellow); }
+    p { margin: 0 0 24px; font: 700 1.6rem "Caveat", cursive; }
+    a {
+      display: inline-block;
+      justify-self: center;
+      padding: 13px 24px;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>404</h1>
+  <div class="term">
+    <div><b>$</b> git checkout this-page</div>
+    <div class="err">error: pathspec 'this-page' did not match any file(s) known to git</div>
+  </div>
+  <p>This page took a wrong turn. Happens to the best of us ♡</p>
+  <!-- Pages serves this at any depth, so link to the site root -->
+  <a href="/Open-Source_BYTE_2K26/">Back to the journey →</a>
+</body>
+</html>

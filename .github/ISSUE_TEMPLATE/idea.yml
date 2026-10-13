@@ -1,0 +1,34 @@
+name: Propose a feature (Level 4)
+description: Pitch something new for the website before you build it
+labels: ["proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Level 4 starts here: talk it through **before** writing code. A maintainer will reply,
+        and once everyone agrees, the issue gets the `level-4` label and you can claim it with `/assign`.
+  - type: textarea
+    id: what
+    attributes:
+      label: What do you want to build?
+      placeholder: e.g. An events section that lists upcoming workshops
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Who is it for, and why does it help?
+    validations:
+      required: true
+  - type: textarea
+    id: how
+    attributes:
+      label: How would you build it?
+      description: Which files would change? Any new data files? Keep it plain HTML, CSS and JavaScript (no frameworks).
+    validations:
+      required: true
+  - type: textarea
+    id: sketch
+    attributes:
+      label: Sketch or mockup
+      description: Optional. A photo of a paper sketch is perfect.

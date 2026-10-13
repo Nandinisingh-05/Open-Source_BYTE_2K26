@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="What open source is, why so few students hear about it, and the problems you will hit on your first pull request." />
+  <meta name="theme-color" content="#b8def2" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="What Is Open Source, and Why Is Nobody Telling You?" />
+  <meta property="og:description" content="What open source is, why so few students hear about it, and the problems you will hit on your first pull request." />
+  <meta property="og:url" content="https://thebyteclubnie.github.io/Open-Source_BYTE_2K26/blog/what-is-open-source.html" />
+  <meta property="og:image" content="https://thebyteclubnie.github.io/Open-Source_BYTE_2K26/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>What Is Open Source, and Why Is Nobody Telling You? · BYTE Blog</title>
+  <link rel="icon" type="image/png" href="../assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;700&family=Knewave&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script>try { if (localStorage.getItem("byte-theme") === "byte") document.documentElement.dataset.theme = "byte"; } catch {}</script>
+</head>
+<body>
+  <a class="skip" href="#post">Skip to the post</a>
+  <div class="read-progress" aria-hidden="true"></div>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="logo" href="../index.html"><img class="logo__badge" src="../assets/byte-logo.webp" alt="The BYTE Club" width="56" height="56" /><span class="logo__text">Open Source<br />2K26</span></a>
+      <a class="btn btn--outline btn--sm" href="../index.html#blog"><span aria-hidden="true">←</span> All posts</a>
+    </div>
+  </header>
+
+  <main id="post">
+    <article class="article">
+      <header class="article__head">
+        <span class="post__tag">Basics</span>
+        <h1 class="display article__title">What Is Open Source, and Why Is Nobody Telling You?</h1>
+        <p class="article__meta">The BYTE Club · <time datetime="2026-10-13">13 Oct 2026</time> · 6 min read</p>
+      </header>
+
+      <p class="article__lede">You have probably heard the term “open source” in college, in a club, or in a placement talk. Maybe someone said “contribute to open source” and moved on before explaining what that means. Many students are in the same spot, and that is exactly why this blog exists.</p>
+
+      <h2>What is open source?</h2>
+      <p>Open source software is software whose code anyone can read, use, and suggest changes to. Firefox and the Linux operating system are well-known examples. Newer examples include open-weight AI models, which people can download, run, and improve on their own machines.</p>
+      <p>The key idea is that the code is public. You can open it, see how it works, and ask the people who maintain it to accept your changes.</p>
+
+      <h2>Why does it still feel unknown?</h2>
+      <p>Google Summer of Code is known mostly because Google runs it. Programs like LFX and MLH are rarely mentioned in the colleges I know of. So a student who has never been told about them has no reason to look.</p>
+      <p>That is a loss, because open source is one of the best free learning spaces available to students. Real projects teach things that tutorials rarely do:</p>
+      <ul>
+        <li><strong>How to write industry-level code.</strong> Real projects have standards for naming, testing, and style.</li>
+        <li><strong>How real systems work.</strong> You can read code that runs on millions of devices, not just small demo apps.</li>
+        <li><strong>How to communicate.</strong> You learn to write clear issues, ask good questions, and explain your changes to strangers.</li>
+        <li><strong>How teams work.</strong> You see how maintainers review code, make decisions, and handle disagreements.</li>
+      </ul>
+      <p>Most of this costs nothing except your time and curiosity.</p>
+
+      <h2>Try it yourself on your own device</h2>
+      <p>You do not need to wait for permission to start. Many open source projects can run on your own laptop.</p>
+      <p>Take Gemma, an open-weight AI model from Google. You can download it and run it locally with tools like Ollama. Once it runs, you can change a setting, try a different prompt format, or read how the project loads the model. Then you can break something on purpose and fix it. That process teaches more than watching ten videos.</p>
+      <p>The same idea works for many other projects. Pick a small tool you already use, clone its code, run it, and see what happens. If it fails, read the error message. Errors are the best teachers in open source.</p>
+      <p>Breaking things on your own machine is safe. Your copy of the code is yours. Nothing you change there affects the real project until you choose to send a pull request.</p>
+
+      <h2>What is Hacktoberfest?</h2>
+      <p>Hacktoberfest is one of the largest open source programs ever run. It started in 2014 as a yearly challenge run by DigitalOcean. For years, the rule was simple: make pull requests to open source projects during October and earn a T-shirt. A pull request, or PR, is a way to propose a change to someone else’s project.</p>
+      <p>That format worked for many students, but it had a problem. Maintainers received a flood of low-effort pull requests, made just to hit a count. Reviewing and closing them took time away from real work. The official site says this problem grew worse as AI tools made low-effort pull requests easy to generate.</p>
+      <p>So in 2026, Hacktoberfest changed its focus. It no longer counts pull requests for rewards. Instead, it runs events, called Fests, where people learn and build with open-source AI. The lesson is that open source is about learning and contributing. The prizes were never the point.</p>
+
+      <h2>What happens after you open a PR?</h2>
+      <p>Once you send a pull request, a few things usually happen. An automated check may run to see if your change builds and passes tests. A maintainer may leave comments, ask questions, or request changes. You may need to edit your code and push the update, and the pull request updates automatically.</p>
+      <p>This back and forth is normal. It is the review process, and it is where most of the learning happens.</p>
+
+      <h2>Problems students face</h2>
+
+      <h3>No reply after a pull request</h3>
+      <p>The problem is that you may hear nothing for weeks. This is common because maintainers are often volunteers with their own jobs and studies. Silence does not always mean rejection. Sometimes the project is just busy.</p>
+      <aside class="nudge"><span class="nudge__label">nudge</span>Wait a few days, then leave one short, polite comment asking if the change is still under review. Try this on a pull request you already sent, or write one for a small project.</aside>
+
+      <h3>“Good first issue” is not always good</h3>
+      <p>An issue is a task or problem written on a project’s page. Many projects label some issues “good first issue” to show beginners where to start.</p>
+      <p>The label is a hint, not a promise. Some of these issues are truly easy, like fixing a typo. Others need real knowledge of the project, like changing how a feature works across several files. If you pick the wrong one, you can spend days stuck without help.</p>
+      <aside class="nudge"><span class="nudge__label">nudge</span>Before you start, check when the project was last updated, whether the issue description is clear, and whether someone has already replied. Try this on one repo you use.</aside>
+
+      <h3>Fear of breaking something</h3>
+      <p>Many students worry that their change will make the project worse. This fear stops people before they even try.</p>
+      <p>In open source, a pull request is a proposal for review. Nothing goes live without the maintainers agreeing to it. Reviewers expect beginners to make mistakes, and a change can be edited, improved, or closed without blame.</p>
+      <aside class="nudge"><span class="nudge__label">nudge</span>Start with a small change, like improving the documentation or adding a missing test. Try finding one docs issue this week.</aside>
+
+      <h3>Tutorials do not teach maintenance</h3>
+      <p>Tutorials teach you to build something from start to finish. They do not teach how real projects are kept running. You rarely learn how to read a failed build log, follow a contribution guide, or respond to review comments.</p>
+      <p>These habits matter more than any single feature. They are what people on real teams do every day.</p>
+      <aside class="nudge"><span class="nudge__label">nudge</span>Open the CONTRIBUTING file of one project and write down three rules it asks you to follow. Notice which ones surprised you.</aside>
+
+      <h3>How do you judge a project?</h3>
+      <p>Before you invest time in a project, you can check a few things. Look at when the last change was made. Check whether issues are being answered or piling up. Read the README to see if it explains how to set up the project.</p>
+      <aside class="nudge"><span class="nudge__label">nudge</span>Pick two projects you are curious about and compare them using these three checks. Notice which one feels easier to join.</aside>
+
+      <h2>A question to end with</h2>
+      <p>After you finish your task, write down one thing you learned from it, even if your pull request was never accepted. That note is your real result from open source. Many people who contribute today started with a change that was not merged, and they kept what they learned from it.</p>
+
+      <h2>We are not giving you the answers</h2>
+      <p>This blog will not solve these problems for you. It will tell you that you are not alone, give you one small push, and leave the rest to you. Open source is learned by trying, failing, and trying again.</p>
+      <div class="article__task">
+        <span class="tape"></span>
+        <p class="article__task-label hand">your task for today</p>
+        <p>Find one open source project you already use and read its contributing guide. That is the first step.</p>
+      </div>
+      <p class="article__signoff hand">Stay tuned for the next blog in the series ✱</p>
+
+      <footer class="article__end">
+        <p>Want a safe place to make your first pull request?</p>
+        <a class="btn" href="../index.html#levels">Start the journey <span aria-hidden="true">→</span></a>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__bar">
+      <div class="container footer__inner">
+        <a class="logo logo--light" href="../index.html"><img class="logo__badge" src="../assets/byte-logo.webp" alt="The BYTE Club" width="56" height="56" /><span class="logo__text">Open Source<br />2K26</span></a>
+        <p class="footer__credit">Built by students of NIE, for students of NIE ♡<br />The BYTE Club · 2026</p>
+        <a class="footer__top" href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Reading progress bar along the top of the page.
+    const bar = document.querySelector(".read-progress");
+    const update = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      bar.style.scale = `${max > 0 ? Math.min(1, scrollY / max) : 1} 1`;
+    };
+    addEventListener("scroll", update, { passive: true });
+    addEventListener("resize", update);
+    update();
+  </script>
+</body>
+</html>

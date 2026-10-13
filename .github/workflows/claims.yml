@@ -1,0 +1,100 @@
+name: Issue claims
+
+# Students claim level-2/3/4 issues by commenting /assign (and let go with /unassign).
+# One open issue per person, and claims expire if no pull request shows up in time.
+on:
+  issue_comment:
+    types: [created]
+  schedule:
+    - cron: "17 */6 * * *" # check for expired claims every 6 hours
+
+permissions:
+  issues: write
+
+env:
+  # Hours a student has to open a PR after claiming, per level.
+  CLAIM_HOURS: '{"level-2": 48, "level-3": 72, "level-4": 168}'
+
+jobs:
+  command:
+    if: github.event_name == 'issue_comment' && !github.event.issue.pull_request
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const command = context.payload.comment.body.trim().toLowerCase();
+            if (command !== "/assign" && command !== "/unassign") return;
+
+            const HOURS = JSON.parse(process.env.CLAIM_HOURS);
+            const issue = context.payload.issue;
+            const user = context.payload.comment.user.login;
+            const { owner, repo } = context.repo;
+            const reply = (text) => github.rest.issues.createComment({ owner, repo, issue_number: issue.number, body: text });
+
+            if (command === "/unassign") {
+              if (!issue.assignees.some((a) => a.login === user)) return reply(`@${user} you're not assigned to this issue.`);
+              await github.rest.issues.removeAssignees({ owner, repo, issue_number: issue.number, assignees: [user] });
+              return reply(`Done, @${user}. It's free for someone else now. Thanks for being upfront!`);
+            }
+
+            const level = issue.labels.map((l) => l.name).find((n) => n in HOURS);
+            if (issue.state !== "open") return reply(`@${user} this issue is already closed. Pick an open one!`);
+            if (!level) return reply(`@${user} only \`level-2\`, \`level-3\` and \`level-4\` issues can be claimed. Level 1 doesn't need an issue: just follow the first PR guide on the website.`);
+            if (issue.assignees.length) return reply(`@${user} @${issue.assignees[0].login} is already on this one. Try another \`${level}\` issue!`);
+
+            const mine = await github.paginate(github.rest.issues.listForRepo, { owner, repo, assignee: user, state: "open" });
+            const other = mine.find((i) => !i.pull_request && i.number !== issue.number);
+            if (other) return reply(`@${user} you're already working on #${other.number}. Finish it or comment \`/unassign\` there first. One issue at a time keeps it fair for everyone.`);
+
+            await github.rest.issues.addAssignees({ owner, repo, issue_number: issue.number, assignees: [user] });
+            const time = HOURS[level] >= 72 ? `${HOURS[level] / 24} days` : `${HOURS[level]} hours`;
+            await reply([
+              `It's yours, @${user}! ✱`,
+              "",
+              `You have **${time}** to open a pull request. Put \`Closes #${issue.number}\` in its description so it links up.`,
+              "A draft pull request counts too, so open one early if you need more time.",
+              "Stuck? Ask right here, or in Discussions.",
+            ].join("\n"));
+
+  expire:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const HOURS = JSON.parse(process.env.CLAIM_HOURS);
+            const { owner, repo } = context.repo;
+            const issues = await github.paginate(github.rest.issues.listForRepo, { owner, repo, state: "open", assignee: "*" });
+
+            for (const issue of issues) {
+              if (issue.pull_request) continue;
+              const level = issue.labels.map((l) => l.name).find((n) => n in HOURS);
+              if (!level) continue; // maintainers' own assignments are left alone
+
+              const timeline = await github.paginate(github.rest.issues.listEventsForTimeline, { owner, repo, issue_number: issue.number });
+              for (const { login } of issue.assignees) {
+                const assignedAt = timeline
+                  .filter((e) => e.event === "assigned" && e.assignee?.login === login)
+                  .map((e) => Date.parse(e.created_at))
+                  .pop();
+                if (!assignedAt || Date.now() - assignedAt < HOURS[level] * 3600e3) continue;
+
+                // An open PR by the assignee that mentions this issue counts as progress.
+                const working = timeline.some((e) =>
+                  e.event === "cross-referenced" &&
+                  e.source?.issue?.pull_request &&
+                  e.source.issue.state === "open" &&
+                  e.source.issue.user?.login === login
+                );
+                if (working) continue;
+
+                await github.rest.issues.removeAssignees({ owner, repo, issue_number: issue.number, assignees: [login] });
+                await github.rest.issues.createComment({
+                  owner, repo, issue_number: issue.number,
+                  body: `@${login} no pull request showed up in time, so I've freed this issue for others. Still on it? Just comment \`/assign\` again. No hard feelings ✱`,
+                });
+                core.info(`Unassigned ${login} from #${issue.number}`);
+              }
+            }

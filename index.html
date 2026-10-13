@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Start your open source journey with The BYTE Club, NIE. One small PR at a time." />
+  <meta name="theme-color" content="#b8def2" />
+  <!-- Link previews (WhatsApp, LinkedIn, Discord). Update the URLs if the site moves off GitHub Pages. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Small Commits, Big Journeys · Open Source BYTE 2K26" />
+  <meta property="og:description" content="Make your first open source contribution with The BYTE Club, NIE. Six levels, one small PR at a time." />
+  <meta property="og:url" content="https://thebyteclubnie.github.io/Open-Source_BYTE_2K26/" />
+  <meta property="og:image" content="https://thebyteclubnie.github.io/Open-Source_BYTE_2K26/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Open Source BYTE 2K26</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:wght@400;500;700&family=Knewave&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>try { if (localStorage.getItem("byte-theme") === "byte") document.documentElement.dataset.theme = "byte"; } catch {}</script>
+</head>
+<body>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="logo" href="#top"><img class="logo__badge" src="assets/byte-logo.webp" alt="The BYTE Club" width="56" height="56" /><span class="logo__text">Open Source<br />2K26</span></a>
+
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#levels">Journey</a></li>
+          <li><a href="#first-pr">First PR</a></li>
+          <li><a href="#contributors">Contributors</a></li>
+          <li hidden><a href="#blog">Blog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#ask">Ask</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--outline btn--sm" aria-label="Star the repo on GitHub" href="https://github.com/TheBYTEClubNIE/Open-Source_BYTE_2K26">Star<span class="hide-sm"> on GitHub</span> <span aria-hidden="true">→</span></a>
+        <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+
+        <div class="hero__text">
+          <svg class="hero__sun" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="7" /><path d="M20 3v6M20 31v6M3 20h6M31 20h6M8 8l4 4M28 28l4 4M8 32l4-4M28 12l4-4" /></svg>
+          <p class="hero__note hand" aria-hidden="true">First PR.<br />Real code.<br />Good vibes.</p>
+
+          <h1 class="display hero__title">
+            <span>Small</span>
+            <span>Commits,</span>
+            <span>Big</span>
+            <span class="hero__swoosh">Journeys
+              <svg viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M6 16 C 90 4, 210 4, 294 13" /></svg>
+            </span>
+          </h1>
+
+          <p class="hero__lede">A beginner-friendly open source program by The BYTE Club, NIE. Put your name on this page, level up one pull request at a time, and graduate to real-world projects.</p>
+
+          <a class="btn" href="#first-pr">Make your first PR <span aria-hidden="true">→</span></a>
+          <p class="hero__psst hand">psst… the terminal in the picture actually works. <button class="link-btn" type="button" data-open-term>Try it →</button></p>
+        </div>
+
+        <!-- Decorative collage: every piece hints at a step in the journey. -->
+        <div class="collage" aria-hidden="true">
+          <svg class="plane" viewBox="0 0 200 80"><path class="plane__trail" d="M4 70 C 50 70, 70 20, 120 40 S 160 50, 170 30" /><path class="plane__body" d="M168 14 L196 6 L186 34 L178 24 Z M178 24 L196 6" /></svg>
+
+          <div class="terminal">
+            <div class="terminal__dots"><i></i><i></i><i></i></div>
+            <p><b>$</b> git checkout -b my-first-pr</p>
+            <p><b>$</b> git commit -m "add my name"</p>
+            <p><b>$</b> git push origin my-first-pr</p>
+            <p class="terminal__ok">✓ PR #1 merged</p>
+            <p><b>$</b> <span class="terminal__cursor"></span></p>
+            <span class="terminal__sticker">click me ↗</span>
+          </div>
+
+          <div class="map">
+            <svg viewBox="0 0 300 200">
+              <path class="map__route" d="M30 165 C 60 130, 70 120, 85 125 S 120 150, 135 140 S 165 85, 185 85 S 220 110, 235 100 S 255 55, 268 42" />
+              <g class="map__stops">
+                <circle cx="30" cy="165" r="11" /><text x="30" y="170">0</text>
+                <circle cx="85" cy="125" r="11" /><text x="85" y="130">1</text>
+                <circle cx="135" cy="140" r="11" /><text x="135" y="145">2</text>
+                <circle cx="185" cy="85" r="11" /><text x="185" y="90">3</text>
+                <circle cx="235" cy="100" r="11" /><text x="235" y="105">4</text>
+              </g>
+              <path class="map__flag" d="M268 42 V 8 L 290 16 L 268 24" />
+            </svg>
+          </div>
+
+          <figure class="polaroid">
+            <span class="tape"></span>
+            <div class="graph"></div>
+            <figcaption class="hand">day one ♡</figcaption>
+          </figure>
+
+          <div class="sticky hand"><span class="tape"></span>good<br />first<br />issue</div>
+
+          <svg class="scribble" viewBox="0 0 220 110"><path d="M12 70 L60 14 L44 92 L112 22 L94 98 L168 32 L150 100 L206 52" /></svg>
+
+          <div class="pr">
+            <div class="pr__top">
+              <svg viewBox="0 0 24 24"><circle cx="6" cy="5" r="2.5" /><circle cx="6" cy="19" r="2.5" /><circle cx="18" cy="12" r="2.5" /><path d="M6 7.5v9M6 7.5c0 3 3 4.5 9.5 4.5" /></svg>
+              <span class="pr__badge">Merged</span>
+            </div>
+            <p class="pr__title">Add my name to contributors</p>
+            <p class="pr__meta">#1 · level-1 · <span class="add">+6</span> <span class="del">−0</span></p>
+          </div>
+
+          <p class="collage__note hand">Same repo,<br />different you ♡</p>
+          <svg class="collage__arrow" viewBox="0 0 80 60"><path d="M6 50 C 20 20, 45 12, 70 18 M60 10 L71 18 L60 26" /></svg>
+        </div>
+
+      </div>
+      <a class="scroll-hint" href="#levels">Scroll</a>
+    </section>
+
+    <section class="band journey" id="levels">
+      <div class="container">
+
+        <div class="section-head">
+          <div>
+            <p class="kicker">Start here</p>
+            <h2 class="display section-title">The Journey</h2>
+            <p class="section-lede">Six stops. Each one teaches you one new open source skill. Click a stop to see what's there, and tick it off when you're done. This browser remembers where you are.</p>
+          </div>
+          <p class="journey__status hand" aria-live="polite">
+            <span class="journey__status-text">Pick a stop to begin.</span>
+            <button class="journey__reset" type="button" hidden>start over</button>
+          </p>
+        </div>
+
+        <div class="route" role="tablist" aria-label="Levels">
+          <svg viewBox="0 0 1000 260" preserveAspectRatio="none" aria-hidden="true"><path d="M60 190 C 130 190, 170 90, 240 90 S 350 170, 420 170 S 530 70, 600 70 S 710 160, 780 160 S 880 60, 940 60" /></svg>
+          <svg class="route__plane" viewBox="0 0 40 32" aria-hidden="true"><path d="M2 14 L38 2 L28 30 L20 19 Z M20 19 L38 2" /></svg>
+
+          <button class="stop" type="button" role="tab" id="stop-0" aria-controls="level-0" aria-selected="true" style="--x:6%;--y:73%;--i:0"><span class="stop__dot">0</span><span class="stop__name">Set up</span></button>
+          <button class="stop" type="button" role="tab" id="stop-1" aria-controls="level-1" aria-selected="false" tabindex="-1" style="--x:24%;--y:35%;--i:1"><span class="stop__dot">1</span><span class="stop__name">First PR</span></button>
+          <button class="stop" type="button" role="tab" id="stop-2" aria-controls="level-2" aria-selected="false" tabindex="-1" style="--x:42%;--y:65%;--i:2"><span class="stop__dot">2</span><span class="stop__name">Docs</span></button>
+          <button class="stop" type="button" role="tab" id="stop-3" aria-controls="level-3" aria-selected="false" tabindex="-1" style="--x:60%;--y:27%;--i:3"><span class="stop__dot">3</span><span class="stop__name">Small code</span></button>
+          <button class="stop" type="button" role="tab" id="stop-4" aria-controls="level-4" aria-selected="false" tabindex="-1" style="--x:78%;--y:62%;--i:4"><span class="stop__dot">4</span><span class="stop__name">Feature</span></button>
+          <button class="stop" type="button" role="tab" id="stop-5" aria-controls="level-5" aria-selected="false" tabindex="-1" style="--x:94%;--y:23%;--i:5"><span class="stop__dot">5</span><span class="stop__name">Graduate</span></button>
+        </div>
+
+        <article class="level-card" id="level-0" role="tabpanel" aria-labelledby="stop-0" tabindex="0">
+          <span class="tape"></span>
+          <div>
+            <p class="level-card__meta">Level 0 · about 15 min</p>
+            <h3 class="display level-card__title">Set up</h3>
+            <p>Get your GitHub account ready and introduce yourself. No code yet, just getting your bags packed.</p>
+            <a class="btn" href="https://github.com/signup">Create a GitHub account <span aria-hidden="true">→</span></a>
+          </div>
+          <div>
+            <p class="level-card__label hand">you'll do</p>
+            <ul>
+              <li>Create a GitHub account with a real photo and bio</li>
+              <li>Write a profile README</li>
+              <li>Star this repo and say hi in the Introduce Yourself issue</li>
+            </ul>
+            <p class="level-card__label hand">you'll learn</p>
+            <ul class="chips"><li>GitHub profiles</li><li>Issues</li><li>Markdown</li></ul>
+            <label class="done"><input type="checkbox" data-level="0" /> I've done this</label>
+          </div>
+        </article>
+
+        <article class="level-card" id="level-1" role="tabpanel" aria-labelledby="stop-1" tabindex="0" hidden>
+          <span class="tape"></span>
+          <div>
+            <p class="level-card__meta">Level 1 · about 30 min</p>
+            <h3 class="display level-card__title">First PR</h3>
+            <p>Put your name on this website. You'll add one small file, open a pull request, and a bot merges it once it checks out.</p>
+            <a class="btn" href="#first-pr">Follow the guide <span aria-hidden="true">→</span></a>
+          </div>
+          <div>
+            <p class="level-card__label hand">you'll do</p>
+            <ul>
+              <li>Fork and clone this repo</li>
+              <li>Add <code>contributors/your-username.json</code></li>
+              <li>Commit, push, and open a pull request</li>
+            </ul>
+            <p class="level-card__label hand">you'll learn</p>
+            <ul class="chips"><li>Fork</li><li>Clone</li><li>Branch</li><li>Commit</li><li>Pull request</li></ul>
+            <label class="done"><input type="checkbox" data-level="1" /> I've done this</label>
+          </div>
+        </article>
+
+        <article class="level-card" id="level-2" role="tabpanel" aria-labelledby="stop-2" tabindex="0" hidden>
+          <span class="tape"></span>
+          <div>
+            <p class="level-card__meta">Level 2 · 1 to 2 hours</p>
+            <h3 class="display level-card__title">Docs</h3>
+            <p>Pick a real issue and fix it. Docs are where most open source contributors start, and maintainers love them.</p>
+            <a class="btn" href="https://github.com/TheBYTEClubNIE/Open-Source_BYTE_2K26/issues?q=is%3Aopen+label%3Alevel-2">Find a level-2 issue <span aria-hidden="true">→</span></a>
+            <div class="live-issues" data-label="level-2" hidden></div>
+          </div>
+          <div>
+            <p class="level-card__label hand">you'll do</p>
+            <ul>
+              <li>Claim an issue by commenting <code>/assign</code></li>
+              <li>Fix a typo, improve the README, or add an FAQ entry</li>
+              <li>Link your PR with <code>Closes #issue-number</code></li>
+            </ul>
+            <p class="level-card__label hand">you'll learn</p>
+            <ul class="chips"><li>Claiming issues</li><li>Linking PRs</li><li>PR templates</li></ul>
+            <label class="done"><input type="checkbox" data-level="2" /> I've done this</label>
+          </div>
+        </article>
+
+        <article class="level-card" id="level-3" role="tabpanel" aria-labelledby="stop-3" tabindex="0" hidden>
+          <span class="tape"></span>
+          <div>
+            <p class="level-card__meta">Level 3 · 2 to 4 hours</p>
+            <h3 class="display level-card__title">Small code</h3>
+            <p>Change real code on this site. A maintainer will review it and probably ask for changes. That's normal, and it's the most useful part.</p>
+            <a class="btn" href="https://github.com/TheBYTEClubNIE/Open-Source_BYTE_2K26/issues?q=is%3Aopen+label%3Alevel-3">Find a level-3 issue <span aria-hidden="true">→</span></a>
+            <div class="live-issues" data-label="level-3" hidden></div>
+          </div>
+          <div>
+            <p class="level-card__label hand">you'll do</p>
+            <ul>
+              <li>Fix a UI bug or an accessibility problem</li>
+              <li>Respond to review comments and push fixes</li>
+              <li>Sync your fork and solve a merge conflict</li>
+            </ul>
+            <p class="level-card__label hand">you'll learn</p>
+            <ul class="chips"><li>Code review</li><li>Syncing forks</li><li>Merge conflicts</li></ul>
+            <label class="done"><input type="checkbox" data-level="3" /> I've done this</label>
+          </div>
+        </article>
+
+        <article class="level-card" id="level-4" role="tabpanel" aria-labelledby="stop-4" tabindex="0" hidden>
+          <span class="tape"></span>
+          <div>
+            <p class="level-card__meta">Level 4 · 1 to 2 weeks</p>
+            <h3 class="display level-card__title">Feature</h3>
+            <p>Propose something new for this site, talk it through with maintainers, then build it.</p>
+            <a class="btn" href="https://github.com/TheBYTEClubNIE/Open-Source_BYTE_2K26/issues?q=is%3Aopen+label%3Alevel-4">Find a level-4 issue <span aria-hidden="true">→</span></a>
+            <div class="live-issues" data-label="level-4" hidden></div>
+          </div>
+          <div>
+            <p class="level-card__label hand">you'll do</p>
+            <ul>
+              <li>Open a proposal before writing code</li>
+              <li>Build a new section or page</li>
+              <li>Get it through a full review</li>
+            </ul>
+            <p class="level-card__label hand">you'll learn</p>
+            <ul class="chips"><li>Proposals</li><li>Design discussions</li><li>Bigger reviews</li></ul>
+            <label class="done"><input type="checkbox" data-level="4" /> I've done this</label>
+          </div>
+        </article>
+
+        <article class="level-card" id="level-5" role="tabpanel" aria-labelledby="stop-5" tabindex="0" hidden>
+          <span class="tape"></span>
+          <div>
+            <p class="level-card__meta">Level 5 · your pace</p>
+            <h3 class="display level-card__title">Graduate</h3>
+            <p>The real goal. Find a project you actually use and get a pull request merged there. Graduates go in the Hall of Fame.</p>
+            <a class="btn" href="https://goodfirstissue.dev">Find a beginner issue <span aria-hidden="true">→</span></a>
+            <p class="live-issues"><a href="#contributors" data-show-grads>See the Hall of Fame →</a></p>
+          </div>
+          <div>
+            <p class="level-card__label hand">you'll do</p>
+            <ul>
+              <li>Pick a project and read its CONTRIBUTING guide</li>
+              <li>Get a PR merged there</li>
+              <li>Share the link with us</li>
+            </ul>
+            <p class="level-card__label hand">you'll learn</p>
+            <ul class="chips"><li>Real-world projects</li><li>Working with strangers</li></ul>
+            <label class="done"><input type="checkbox" data-level="5" /> I've done this</label>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="first-pr" id="first-pr">
+      <div class="container">
+
+        <div class="section-head">
+          <div>
+            <p class="kicker">Level 1 guide</p>
+            <h2 class="display section-title">Your First PR</h2>
+            <p class="section-lede">Fill in your details and every command below fills itself in for you. Copy, paste, done.</p>
+          </div>
+          <p class="section-aside hand">≈ 30 minutes.<br />Promise.</p>
+        </div>
+
+        <div class="first-pr__grid">
+
+          <!-- Left: the student's details + live preview of their contributor file -->
+          <div class="details">
+            <span class="tape"></span>
+            <p class="details__title hand">your details</p>
+            <form class="details__form">
+              <label>GitHub username
+                <input name="github" autocomplete="username" autocapitalize="off" spellcheck="false" placeholder="e.g. octocat" maxlength="39" />
+              </label>
+              <p class="field-hint" hidden>That doesn't look like a GitHub username. Letters, numbers and single hyphens only.</p>
+              <label>Name
+                <input name="name" autocomplete="name" placeholder="e.g. Riya Sharma" maxlength="60" />
+              </label>
+              <label>Year
+                <select name="year">
+                  <option value="1">1st year</option>
+                  <option value="2">2nd year</option>
+                  <option value="3">3rd year</option>
+                  <option value="4">4th year</option>
+                </select>
+              </label>
+              <label>One line about you
+                <input name="note" placeholder="e.g. I break things, then fix them." maxlength="100" />
+              </label>
+            </form>
+
+            <div class="code code--file">
+              <p class="code__name">contributors/<span data-u>your-username</span>.json</p>
+              <button class="copy" type="button">copy</button>
+              <pre><code class="json-preview"></code></pre>
+            </div>
+          </div>
+
+          <!-- Right: the steps -->
+          <div>
+            <div class="toggle" role="group" aria-label="How do you want to do it?">
+              <button type="button" aria-pressed="true" aria-controls="way-terminal">Terminal <span class="hand">(learn git)</span></button>
+              <button type="button" aria-pressed="false" aria-controls="way-browser">Browser only <span class="hand">(fastest)</span></button>
+            </div>
+
+            <ol class="steps" id="way-terminal">
+              <li>
+                <h3>Fork the repo</h3>
+                <p>This makes your own copy on GitHub that you're allowed to change.</p>
+                <a class="btn btn--outline btn--sm" href="https://github.com/TheBYTEClubNIE/Open-Source_BYTE_2K26/fork">Fork it on GitHub <span aria-hidden="true">↗</span></a>
+              </li>
+              <li>
+                <h3>Clone your fork</h3>
+                <p>Download your copy to your laptop.</p>
+                <div class="code"><button class="copy" type="button">copy</button><pre><code><span>git clone https://github.com/<span data-u>your-username</span>/Open-Source_BYTE_2K26.git</span><span>cd Open-Source_BYTE_2K26</span></code></pre></div>
+              </li>
+              <li>
+                <h3>Make a branch</h3>
+                <p>Keep your change separate from <code>main</code>.</p>
+                <div class="code"><button class="copy" type="button">copy</button><pre><code><span>git checkout -b add-<span data-u>your-username</span></span></code></pre></div>
+              </li>
+              <li>
+                <h3>Add your file</h3>
+                <p>Create <code>contributors/<span data-u>your-username</span>.json</code> and paste in your file from the details card.</p>
+              </li>
+              <li>
+                <h3>Commit and push</h3>
+                <p>Save your change with a message, then send it to your fork.</p>
+                <div class="code"><button class="copy" type="button">copy</button><pre><code><span>git add contributors/<span data-u>your-username</span>.json</span><span>git commit -m "Add <span data-u>your-username</span> to contributors"</span><span>git push origin add-<span data-u>your-username</span></span></code></pre></div>
+              </li>
+              <li>
+                <h3>Open the pull request</h3>
+                <p>Go to your fork on GitHub and click <strong>Compare &amp; pull request</strong>. A bot checks your file and merges it, and your face shows up on this page.</p>
+                <a class="btn btn--sm" href="https://github.com/TheBYTEClubNIE/Open-Source_BYTE_2K26/compare">Open a pull request <span aria-hidden="true">↗</span></a>
+              </li>
+            </ol>
+
+            <ol class="steps" id="way-browser" hidden>
+              <li>
+                <h3>Open the new file page</h3>
+                <p>This button opens GitHub with your file name and contents already filled in.</p>
+                <a class="btn btn--sm new-file-link" href="https://github.com/TheBYTEClubNIE/Open-Source_BYTE_2K26/new/main/contributors">Create my file on GitHub <span aria-hidden="true">↗</span></a>
+              </li>
+              <li>
+                <h3>Fork when asked</h3>
+                <p>GitHub will say you can't edit this repo directly. Click <strong>Fork this repository</strong>.</p>
+              </li>
+              <li>
+                <h3>Propose the change</h3>
+                <p>Click <strong>Commit changes…</strong>, then <strong>Propose changes</strong>.</p>
+              </li>
+              <li>
+                <h3>Open the pull request</h3>
+                <p>Click <strong>Create pull request</strong>. A bot checks your file and merges it. Try the terminal way at Level 3, you'll need it there.</p>
+              </li>
+            </ol>
+
+            <p class="steps__after hand">Merged? Go tick off Level 1 on <a href="#levels">the journey ↑</a></p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="band cheats" id="cheatsheet">
+      <div class="container">
+
+        <div class="section-head">
+          <div>
+            <p class="kicker">Cheat sheet</p>
+            <h2 class="display section-title">Git, Decoded</h2>
+            <p class="section-lede">The commands you'll actually use, in plain English. Type what you want to do.</p>
+          </div>
+          <p class="section-aside hand">Bookmark this.<br />Seriously ✱</p>
+        </div>
+
+        <label class="wall-search cheats__search">
+          <span class="sr-only">Search commands</span>
+          <input type="search" placeholder="I want to… (try: undo, sync, branch)" autocomplete="off" />
+        </label>
+
+        <div class="cheats__grid">
+          <article class="cheat" data-keywords="download copy get start laptop">
+            <h3>Get the project on your laptop</h3>
+            <div class="code"><button class="copy" type="button">copy</button><pre><code><span>git clone https://github.com/<span data-u>your-username</span>/Open-Source_BYTE_2K26.git</span></code></pre></div>
+            <p>Downloads your fork. You only do this once.</p>
+          </article>
+          <article class="cheat" data-keywords="changed modified what check see difference">
+            <h3>See what you changed</h3>
+            <div class="code"><button class="copy" type="button">copy</button><pre><code><span>git status</span><span>git diff</span></code></pre></div>
+            <p><code>status</code> lists changed files, <code>diff</code> shows the exact lines.</p>
+          </article>
+          <article class="cheat" data-keywords="branch new start feature create">
+            <h3>Start something new</h3>
+            <div class="code"><button class="copy" type="button">copy</button><pre><code><span>git switch -c my-change</span></code></pre></div>
+            <p>Makes a new branch and moves you onto it. One branch per pull request.</p>
+          </article>
+          <article class="cheat" data-keywords="save commit snapshot stage add">
+            <h3>Save your work</h3>
+            <div class="code"><button class="copy" type="button">copy</button><pre><code><span>git add .</span><span>git commit -m "Describe what you changed"</span></code></pre></div>
+            <p><code>add</code> picks the changes, <code>commit</code> saves them with a message.</p>
+          </article>
+          <article class="cheat" data-keywords="upload send push github share">
+            <h3>Send it to GitHub</h3>
+            <div class="code"><button class="copy" type="button">copy</button><pre><code><span>git push origin my-change</span></code></pre></div>
+            <p>Uploads your branch to your fork. Then open a pull request on GitHub.</p>
+          </article>
+          <article class="cheat" data-keywords="sync update latest upstream behind fork pull">
+            <h3>Get the club's latest changes</h3>
+            <div class="code"><button class="copy" type="button">copy</button><pre><code><span>git remote add upstream https://github.com/TheBYTEClubNIE/Open-Source_BYTE_2K26.git</span><span>git pull upstream main</span></code></pre></div>
+            <p>The first line is a one-time setup. After that, just run the second line.</p>
+          </article>
+          <article class="cheat" data-keywords="undo discard file revert throw away restore">
+            <h3>Throw away changes to a file</h3>
+            <div class="code"><button class="copy" type="button">copy</button><pre><code><span>git restore path/to/file</span></code></pre></div>
+            <p>Puts the file back to your last commit. Careful: the changes are gone for good.</p>
+          </article>
+          <article class="cheat" data-keywords="undo commit mistake reset uncommit">
+            <h3>Undo the last commit, keep the work</h3>
+            <div class="code"><button class="copy" type="button">copy</button><pre><code><span>git reset --soft HEAD~1</span></code></pre></div>
+            <p>Un-saves the commit but keeps your changes, so you can fix and commit again.</p>
+          </article>
+          <article class="cheat" data-keywords="message typo fix rename amend commit">
+            <h3>Fix the last commit message</h3>
+            <div class="code"><button class="copy" type="button">copy</button><pre><code><span>git commit --amend -m "Better message"</span></code></pre></div>
+            <p>Only before you push. After pushing, just make a new commit instead.</p>
+          </article>
+          <article class="cheat" data-keywords="history log commits past list">
+            <h3>See the history</h3>
+            <div class="code"><button class="copy" type="button">copy</button><pre><code><span>git log --oneline</span></code></pre></div>
+            <p>One line per commit, newest first. Press <code>q</code> to exit.</p>
+          </article>
+        </div>
+
+        <p class="cheats__empty hand" hidden>Nothing for that yet. <a href="#ask">Ask us ↓</a></p>
+
+      </div>
+    </section>
+
+    <section class="people" id="contributors">
+      <div class="container">
+
+        <div class="section-head">
+          <div>
+            <p class="kicker">Community</p>
+            <h2 class="display section-title">Already In</h2>
+            <p class="section-lede">Every face here made their first pull request. Hover a polaroid to say hi, or click to see their GitHub.</p>
+          </div>
+          <p class="section-aside hand"><b class="count">0</b> students<br />in so far</p>
+        </div>
+
+        <div class="board" hidden>
+          <span class="tape"></span>
+          <div class="board__head">
+            <p class="board__title hand">top of the board</p>
+            <p class="board__merged"><b></b> PRs merged so far</p>
+          </div>
+          <ol class="board__list"></ol>
+          <p class="board__empty hand" hidden>The board opens with the first merged PR. Could be yours.</p>
+          <p class="board__note">A merged PR scores its level: a Level 3 PR is 3 points.</p>
+        </div>
+
+        <div class="wall-tools">
+          <label class="wall-search">
+            <span class="sr-only">Find yourself</span>
+            <input type="search" placeholder="Find yourself…" autocomplete="off" spellcheck="false" />
+          </label>
+          <div class="toggle" role="group" aria-label="Filter by year">
+            <button type="button" aria-pressed="true" data-year="all">All</button>
+            <button type="button" aria-pressed="false" data-year="1">1st</button>
+            <button type="button" aria-pressed="false" data-year="2">2nd</button>
+            <button type="button" aria-pressed="false" data-year="3">3rd</button>
+            <button type="button" aria-pressed="false" data-year="4">4th</button>
+            <button type="button" aria-pressed="false" data-year="grad">Grads ✱</button>
+          </div>
+        </div>
+
+        <ul class="wall" id="contributor-wall">
+          <li class="person person--next">
+            <a class="person__card" href="#first-pr">
+              <span class="person__plus" aria-hidden="true">+</span>
+              <span class="person__name">Your spot</span>
+              <span class="person__note hand">make your first PR →</span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="wall__empty hand" hidden>No one matches that. Typo, or not in yet?</p>
+        <p class="wall__more-wrap"><button class="btn btn--outline btn--sm wall__more" type="button" hidden>Show more</button></p>
+
+        <template id="person-card">
+          <li class="person">
+            <a class="person__card">
+              <img class="person__photo" width="160" height="160" loading="lazy" alt="" />
+              <span class="person__name"></span>
+              <span class="person__meta"></span>
+              <span class="person__note hand"></span>
+            </a>
+            <a class="person__grad hand" target="_blank" rel="noopener" hidden>graduate ✱</a>
+          </li>
+        </template>
+
+      </div>
+    </section>
+
+    <!-- Filled from blogs.json. Stays hidden until there's at least one post. -->
+    <section class="band blog" id="blog" hidden>
+      <div class="container">
+
+        <div class="section-head">
+          <div>
+            <p class="kicker">Reading</p>
+            <h2 class="display section-title">From the Blog</h2>
+            <p class="section-lede">Stories, guides and lessons from the club. Wrote about your own first PR? Add it to <code>blogs.json</code> in a pull request.</p>
+          </div>
+          <p class="section-aside hand">Good reads for<br />rainy commits ☂</p>
+        </div>
+
+        <div class="toggle blog__tags" role="group" aria-label="Filter posts by topic" hidden></div>
+        <div class="blog__grid"></div>
+        <p class="wall__more-wrap"><button class="btn btn--outline btn--sm blog__more" type="button" hidden>More posts</button></p>
+
+        <template id="post-card">
+          <article class="post">
+            <a class="post__link" target="_blank" rel="noopener">
+              <span class="post__tag"></span>
+              <h3 class="post__title"></h3>
+              <p class="post__summary"></p>
+              <span class="post__meta"></span>
+              <span class="post__read hand">read it ↗</span>
+            </a>
+          </article>
+        </template>
+
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container faq__inner">
+
+        <div class="faq__side">
+          <p class="kicker">Help</p>
+          <h2 class="display section-title">Stuck?</h2>
+          <p class="section-aside hand faq__aside">You're not the<br />only one ♡</p>
+          <div class="ask">
+            <span class="tape"></span>
+            <p class="ask__title hand">still stuck?</p>
+            <p>Ask us directly. Paste the exact error you see, and someone from the club will help.</p>
+            <a class="btn btn--sm" href="#ask">Ask a question <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+
+        <!-- name="faq" makes it an accordion: opening one closes the others -->
+        <div class="faq__list">
+          <details name="faq" open>
+            <summary>I've never used Git. Can I still join?</summary>
+            <p>Yes. Levels 0 and 1 assume zero experience. If installing Git feels scary, use the <a href="#first-pr" data-way="way-browser">Browser only</a> route for your first PR and learn the terminal later.</p>
+          </details>
+          <details name="faq">
+            <summary>Do I need to be good at coding?</summary>
+            <p>No. Levels 0 to 2 are mostly writing and editing text. Code starts at Level 3, and by then you'll know the workflow.</p>
+          </details>
+          <details name="faq">
+            <summary>My push says "permission denied".</summary>
+            <p>You're pushing to the club's repo instead of your fork. Fork first, clone <em>your</em> fork, then push there.</p>
+          </details>
+          <details name="faq">
+            <summary>My fork is behind. What do I do?</summary>
+            <p>On your fork's GitHub page, click <strong>Sync fork</strong>, then run <code>git pull</code> on your laptop.</p>
+          </details>
+          <details name="faq">
+            <summary>I made a mistake in my pull request.</summary>
+            <p>No need to close it. Fix the file, commit, and push to the same branch. Your PR updates itself.</p>
+          </details>
+          <details name="faq">
+            <summary>What's a merge conflict, and how do I fix it?</summary>
+            <p>Two people changed the same lines. Git marks both versions in the file with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>. Keep the right lines, delete the markers, then commit. You'll practise this at Level 3.</p>
+          </details>
+          <details name="faq">
+            <summary>Can I make more than one Level 1 PR?</summary>
+            <p>One per person. Your contributor file is yours to keep. After that, move on to Level 2 issues.</p>
+          </details>
+          <details name="faq">
+            <summary>How long until my PR is reviewed?</summary>
+            <p>Level 1 PRs are checked and merged automatically. Everything else gets a reply from a maintainer within 48 hours.</p>
+          </details>
+        </div>
+
+      </div>
+    </section>
+    <section class="band ask-us" id="ask">
+      <div class="container">
+
+        <div class="section-head">
+          <div>
+            <p class="kicker">Talk to us</p>
+            <h2 class="display section-title">Ask Us</h2>
+            <p class="section-lede">Stuck, confused, or just curious? Ask here. Your question goes to the club's GitHub Discussions, a member replies within 48 hours, and the next person with the same question finds the answer too.</p>
+          </div>
+          <p class="section-aside hand">No question is<br />too basic ♡</p>
+        </div>
+
+        <div class="ask-us__grid">
+
+          <div class="details">
+            <span class="tape"></span>
+            <p class="details__title hand">your question</p>
+            <form class="details__form ask-form">
+              <fieldset class="topics">
+                <legend>What's it about?</legend>
+                <label><input type="radio" name="topic" value="Setup" checked /><span>Setting up</span></label>
+                <label><input type="radio" name="topic" value="Git" /><span>Git &amp; GitHub</span></label>
+                <label><input type="radio" name="topic" value="My PR" /><span>My pull request</span></label>
+                <label><input type="radio" name="topic" value="Levels" /><span>The levels</span></label>
+                <label><input type="radio" name="topic" value="Other" /><span>Something else</span></label>
+              </fieldset>
+              <label>Your question, in one line
+                <input name="title" required minlength="8" maxlength="120" placeholder="e.g. git push says 'permission denied'" />
+              </label>
+              <p class="ask-form__search" hidden>Someone may have asked already. <a target="_blank" rel="noopener">Search Discussions ↗</a></p>
+              <label>Details
+                <textarea name="body" rows="6" maxlength="2000" placeholder="What were you trying to do? What did you try? Paste the exact error message."></textarea>
+              </label>
+              <div class="ask-form__foot">
+                <button class="btn" type="submit">Post my question <span aria-hidden="true">↗</span></button>
+                <span class="hand">opens GitHub in a new tab</span>
+              </div>
+              <p class="ask-form__sent hand" role="status" hidden>GitHub is open in a new tab. Click <strong>Start discussion</strong> there to post it ✓</p>
+            </form>
+          </div>
+
+          <ol class="steps">
+            <li>
+              <h3>You post it</h3>
+              <p>The button opens GitHub with your question filled in. Check it, then click <strong>Start discussion</strong>. You'll need a GitHub account, which is <a href="#levels">Level 0</a>.</p>
+            </li>
+            <li>
+              <h3>We reply</h3>
+              <p>A club member answers within 48 hours. GitHub emails you when they do.</p>
+            </li>
+            <li>
+              <h3>It helps the next person</h3>
+              <p>Your question stays public, so the next student with the same problem finds the answer. Mark the reply that fixed it as the answer.</p>
+            </li>
+          </ol>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="outro">
+        <h2 class="display outro__title"><span class="hero__swoosh">Your turn.<svg viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M6 16 C 90 4, 210 4, 294 13" /></svg></span></h2>
+        <p class="outro__note hand">one small commit is all it takes ✱</p>
+        <a class="btn" href="#first-pr">Make your first PR <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <div class="container footer__inner">
+        <a class="logo logo--light" href="#top"><img class="logo__badge" src="assets/byte-logo.webp" alt="The BYTE Club" width="56" height="56" /><span class="logo__text">Open Source<br />2K26</span></a>
+        <ul class="footer__links">
+          <li><a href="https://github.com/TheBYTEClubNIE/Open-Source_BYTE_2K26">Repo</a></li>
+          <li><a href="https://github.com/TheBYTEClubNIE/Open-Source_BYTE_2K26/issues">Issues</a></li>
+          <li><a href="https://github.com/TheBYTEClubNIE/Open-Source_BYTE_2K26/discussions">Discussions</a></li>
+          <li><a href="https://github.com/TheBYTEClubNIE/Open-Source_BYTE_2K26/edit/main/index.html">Edit this page</a></li>
+        </ul>
+        <p class="footer__credit">Built by students of NIE, for students of NIE ♡<br />The BYTE Club · 2026</p>
+        <a class="footer__top" href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Secret terminal: click the terminal in the hero, or press ` -->
+  <dialog class="term" aria-label="Terminal">
+    <div class="term__bar">
+      <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="term__title">byte@nie: ~</span>
+      <button class="term__close" type="button" aria-label="Close terminal">×</button>
+    </div>
+    <div class="term__out" role="log" aria-live="polite"></div>
+    <form class="term__form">
+      <label class="term__prompt" for="term-in">$</label>
+      <input id="term-in" autocomplete="off" autocapitalize="off" spellcheck="false" />
+    </form>
+  </dialog>
+
+  <p class="toast hand" role="status" hidden></p>
+
+  <div class="dock">
+    <button class="dock__btn" type="button" data-open-term><span class="dock__icon" aria-hidden="true">&gt;_</span><span class="dock__label">Terminal</span></button>
+    <button class="dock__btn dock__byte" type="button" aria-pressed="false"><span class="dock__icon dock__swatch" aria-hidden="true"></span><span class="dock__label">BYTE mode</span></button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

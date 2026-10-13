@@ -1,0 +1,10 @@
+# Built on every deploy by scripts/build-data.mjs. Never commit them.
+contributors.json
+stats.json
+
+# Local editor and OS files
+.claude/
+.vscode/
+.DS_Store
+Thumbs.db
+node_modules/

@@ -1,0 +1,51 @@
+name: Deploy site
+
+# Builds the data files (contributors.json, stats.json) and publishes the site to GitHub Pages.
+# Nothing is committed back to the repo, so main stays clean and branch protection never gets in the way.
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "*/30 * * * *" # keeps open issues and the leaderboard fresh
+  workflow_dispatch: # also triggered by pull-requests.yml right after a Level 1 merge
+
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history, so the wall is sorted by joining date
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build data files
+        run: node scripts/build-data.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LEADERBOARD_EXCLUDE: "" # maintainers' GitHub logins, comma-separated
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,22 @@
+name: Checks
+
+# Read-only checks on pull requests that change the bots or the data script.
+on:
+  pull_request:
+    paths: [".github/workflows/**", "scripts/**", "contributors/**"]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Bot tests
+        run: node scripts/test-workflows.mjs
+      - name: Contributor files build cleanly
+        run: node scripts/build-data.mjs

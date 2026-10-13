@@ -1,0 +1,42 @@
+name: Something's broken
+description: A bug, typo, or something that looks wrong on the website
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for spotting it! A maintainer will label it with a level so someone can pick it up.
+  - type: textarea
+    id: what
+    attributes:
+      label: What's wrong?
+      description: What did you see, and what did you expect instead?
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where?
+      description: Section of the page (e.g. "Journey", "Git, Decoded") or a link
+    validations:
+      required: true
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options:
+        - Phone
+        - Laptop / desktop
+        - Tablet
+        - Not sure
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Drag an image in here if you can. It helps a lot.
+  - type: checkboxes
+    id: fix
+    attributes:
+      label: Want to fix it yourself?
+      options:
+        - label: Yes, assign it to me once it's labelled (I'll comment /assign)
