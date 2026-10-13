@@ -78,6 +78,8 @@ async function buildStats() {
     }
     if (batch.length < 100) break;
   }
+  // Oldest first: the starter issues (easiest, tagged "good first issue") lead the Journey cards.
+  for (const list of Object.values(issues)) list.sort((a, b) => a.number - b.number);
 
   // A merged PR scores its level label (level-3 = 3 points); unlabelled PRs score 1.
   const scores = new Map();
