@@ -4,8 +4,8 @@
 
 | Name | GitHub | Role |
 |---|---|---|
-| _add name_ | @_username_ | Program lead |
-| _add name_ | @_username_ | Reviewer |
+| Tanishq Dhawan | [@CALL-ME-TATA](https://github.com/CALL-ME-TATA) | Maintainer |
+| | [@riteshkrkarn](https://github.com/riteshkrkarn) | Maintainer |
 
 Students can reach any of these people about anything, including Code of Conduct reports.
 

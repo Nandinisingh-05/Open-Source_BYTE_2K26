@@ -39,7 +39,7 @@ jobs:
         run: node scripts/build-data.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LEADERBOARD_EXCLUDE: "" # maintainers' GitHub logins, comma-separated
+          LEADERBOARD_EXCLUDE: "CALL-ME-TATA,riteshkrkarn" # maintainers stay off the leaderboard
 
       - uses: actions/configure-pages@v5
 
