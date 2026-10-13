@@ -5,7 +5,7 @@
 | Name | GitHub | Role |
 |---|---|---|
 | Tanishq Dhawan | [@CALL-ME-TATA](https://github.com/CALL-ME-TATA) | Maintainer |
-| | [@riteshkrkarn](https://github.com/riteshkrkarn) | Maintainer |
+| Ritesh Kumar Karn | [@riteshkrkarn](https://github.com/riteshkrkarn) | Maintainer |
 
 Students can reach any of these people about anything, including Code of Conduct reports.
 
